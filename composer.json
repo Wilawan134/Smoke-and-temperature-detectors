@@ -1,0 +1,19 @@
+{
+    "name": "asus/smoke-temperature-detectors",
+    "description": "A smoke and temperature detectors project",
+    "require-dev": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Asus\\SmokeTemperatureDetectors\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Wilawan",
+            "email": "66040233134@udru.ac.th"
+        }
+    ],
+    "require": {}
+}
