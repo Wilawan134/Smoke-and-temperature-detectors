@@ -1,0 +1,517 @@
+/* CSS รวมทั้งหมด */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url('รูปภาพ/iot.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.menu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* เพิ่มมุมมน */
+    transition: background-color 0.3s;
+}
+
+.menu button:hover {
+    background-color: #45a049;
+}
+
+.homecontent {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    border-radius: 10px; /* มุมมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+    margin: 20px; /* ระยะห่าง */
+}
+
+.data-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+}
+
+.data-item {
+    background-color: #ffffff; /* สีพื้นหลังของข้อมูล */
+    border: 1px solid #ddd; /* เส้นกรอบ */
+    border-radius: 8px; /* มุมมน */
+    padding: 20px; /* ระยะห่างภายใน */
+    margin: 0 10px; /* ระยะห่างระหว่างข้อมูล */
+    text-align: center;
+    flex: 1; /* ให้แต่ละไอเทมขยายเต็มที่ */
+}
+
+.data-item h4 {
+    margin: 0; /* เอาระยะห่างด้านบนล่างออก */
+    color: #333; /* สีข้อความ */
+}
+
+.data-item p {
+    font-size: 24px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+    color: #4CAF50; /* สีตัวเลข */
+}
+
+.refresh-button {
+    background-color: #4CAF50; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีข้อความ */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    border: none; /* ไม่ใช้เส้นกรอบ */
+    border-radius: 5px; /* มุมมน */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อ hover */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    transition: background-color 0.3s; /* เปลี่ยนสีพื้นหลัง */
+}
+
+.refresh-button:hover {
+    background-color: #45a049; /* สีพื้นหลังเมื่อ hover */
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none; /* เอาเส้นใต้ของลิงก์ออก */
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.print-button, .back-button {
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.print-button:hover, .back-button:hover {
+    background-color: #d32f2f;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+}
+
+select, input[type="date"] {
+    margin: 10px 0 20px;
+    padding: 8px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+@media print {
+    #myChart {
+        display: none; /* ซ่อนกราฟเมื่อพิมพ์ */
+    }
+}
+.popup {
+    display: none; /* ซ่อนเริ่มต้น */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.popup-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.popup-content button:hover {
+    background-color: #45a049;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+.menu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; /* เพิ่มมุมมน */
+    transition: background-color 0.3s;
+}
+.menu button:hover {
+    background-color: #45a049;
+}
+.homecontent {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* ระยะห่าง */
+}
+.homecontent label {
+    font-weight: bold; /* ตัวหนา */
+}
+.homecontent input {
+    padding: 8px;
+    margin: 10px 0;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.homecontent button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.homecontent button:hover {
+    background-color: #45a049;
+}
+.refresh-button {
+    margin-top: 20px;
+    background-color: #008CBA;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* พื้นหลัง */
+}
+.header {
+    background-image: url('รูปภาพ/iot.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+.menu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.menu button:hover {
+    background-color: #45a049;
+}
+.homecontent {
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px; 
+}
+.homecontent input {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.homecontent button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.homecontent button:hover {
+    background-color: #45a049;
+}
+/* ป๊อปอัพ */
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.popup-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.popup-content button:hover {
+    background-color: #45a049;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+.menu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.menu button:hover {
+    background-color: #45a049;
+}
+.report-content {
+    padding: 20px;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+.print-button {
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.print-button:hover {
+    background-color: #d32f2f;
+}
+.report-form {
+    margin: 20px;
+    text-align: center;
+}
+@media print {
+    #myChart {
+        display: none; /* ซ่อนกราฟเมื่อพิมพ์ */
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(to right, #4CAF50, #45a049); /* สีพื้นหลังแบบไล่สี */
+    color: white;
+    text-align: center;
+    padding: 20px; /* เพิ่มระยะห่างด้านบนและล่าง */
+    border-radius: 8px; /* มุมมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* เงาที่เข้มขึ้น */
+    position: relative; /* ใช้สำหรับการวางตำแหน่งของเนื้อหา */
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกินออกมา */
+}
+
+
+
+.form-container {
+    max-width: 400px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
